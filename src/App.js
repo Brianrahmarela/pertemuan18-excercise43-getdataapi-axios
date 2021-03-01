@@ -16,14 +16,6 @@ function App() {
       // console.log(response.data);
   }, []);
 
-  // console.log(data.abilities);
-  // console.log(data.moves);
-//   data.game_indices.forEach((obj, i) => {
-//  console.log("game_index", obj.game_index);
-// //  console.log("msgBody", obj.msgBody);
-// });
-
-
   return (
     <div>
       <h1>Get data from https://pokeapi.co/</h1>
@@ -32,9 +24,10 @@ function App() {
       <p>Weight: {data.weight}</p>
       <p>Base Experience: {data.base_experience}</p>
       <div>
-      {data.abilities.map((item, id) => (
-      <div key={id}>
+      {data.abilities.map((item, idx) => (
+      <div key={idx}>
         <p>Abilities: {item.ability.name}</p>
+        console.log(id);
         <p>Url: {item.ability.url}</p>
         <p>Slot: {item.slot}</p>
         {/* <p>Type: {item.type}</p> */}
@@ -43,12 +36,7 @@ function App() {
       </div>
     </div>
   );
-  // {data.moves.map((item, id) => (
-  //     <div key={id}>
-  //       <p>Slot: {item.slot}</p>
-  //       {/* <p>Type: {item.type}</p> */}
-  //     </div>
-  //   ))}
+
 }
 
 export default App;
