@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import './App.css';
+import {Switch, Route} from 'react-router-dom'
+
 
 function App() {
   const [data, setData] = useState({
@@ -17,6 +19,7 @@ function App() {
   }, []);
 
   return (
+    // <Router>
     <div>
       <h1>Get data from https://pokeapi.co/</h1>
       <p>Name: {data.name}</p>
@@ -27,14 +30,29 @@ function App() {
       {data.abilities.map((item, idx) => (
       <div key={idx}>
         <p>Abilities: {item.ability.name}</p>
-        console.log(id);
         <p>Url: {item.ability.url}</p>
         <p>Slot: {item.slot}</p>
         {/* <p>Type: {item.type}</p> */}
       </div>
-    ))}
+      ))}
       </div>
+      
     </div>
+    // <Switch>
+    //   {/* <Route exact path="/">
+    //       <Home />
+    //     </Route> */}
+    //     <Route path="/todo/">
+    //       <Todo />
+    //     </Route>
+    //     {/* <Route path="/contact">
+    //       <Contact />
+    //     </Route> */}
+    //   </Switch>
+    // </Router>
+
+
+    
   );
 
 }
