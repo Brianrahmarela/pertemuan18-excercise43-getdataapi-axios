@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import './App.css';
-import {Switch, Route} from 'react-router-dom'
 
 
 function App() {
@@ -38,19 +37,7 @@ function App() {
       </div>
       
     </div>
-    // <Switch>
-    //   {/* <Route exact path="/">
-    //       <Home />
-    //     </Route> */}
-    //     <Route path="/todo/">
-    //       <Todo />
-    //     </Route>
-    //     {/* <Route path="/contact">
-    //       <Contact />
-    //     </Route> */}
-    //   </Switch>
-    // </Router>
-
+   
 
     
   );
